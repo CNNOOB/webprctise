@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="加载文档" onclick="newDoc()">
+    <div id="example"></div>
+
+    <script>
+        document.write("可用宽度："+screen.availWidth);
+        document.write("可用高度："+screen.availHeight);
+
+        document.write("宽度："+window.innerWidth);
+        document.write("高度："+window.innerHeight);
+
+        document.write(location.href+"\n");
+        document.write(location.pathname+"\n");
+        document.write(location.port+"\n");
+        document.write(location.hostname+"\n");
+        document.write(location.protocol+"\n");
+        function newDoc() {
+            window.location.assign("http://www.runoob.com");//url会改变
+        }
+
+        txt = "<p>浏览器代号: " + navigator.appCodeName + "</p>";
+        txt+= "<p>浏览器名称: " + navigator.appName + "</p>";
+        txt+= "<p>浏览器版本: " + navigator.appVersion + "</p>";
+        txt+= "<p>启用Cookies: " + navigator.cookieEnabled + "</p>";
+        txt+= "<p>硬件平台: " + navigator.platform + "</p>";
+        txt+= "<p>用户代理: " + navigator.userAgent + "</p>";
+        txt+= "<p>用户代理语言: " + navigator.systemLanguage + "</p>";
+        document.getElementById("example").innerHTML=txt;
+        document.cookie = "username=L-pig";
+        document.cookie = "pwd=123";
+        document.write("<p>"+document.cookie+"</p>");
+
+
+
+
+    </script>
+</body>
+</html>

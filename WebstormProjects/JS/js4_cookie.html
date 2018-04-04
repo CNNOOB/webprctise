@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="checkCookie()">
+<p id="demo"></p>
+<p id="demo1"></p>
+<script>
+    function setCookie(cname,cvalue,days) {
+        var date = new Date();
+        var expires = date.getTime()+(days*24*60*60*1000);
+        date.setTime(expires);
+        document.cookie=cname+"="+cvalue+";"+"expires="+date.toUTCString();
+    }
+
+    function getCookie(cname) {
+        var cookies = document.cookie.split(";");
+        var cookie;
+        for(var i=0;i<cookies.length;i++){
+            cookie=cookies[i].trim();
+            console.log(cookie);
+            console.log(cookie.indexOf(cname));
+            if(cookie.indexOf(cname)!=-1){
+                return cookie.substring(cname.length+1,cookie.length);
+            }
+        }
+        return "";
+
+    }
+    function checkCookie() {
+        var cvalue = getCookie("username");
+        if(cvalue!=null&&cvalue!=""){
+            document.getElementById("demo").innerHTML = "欢迎："+cvalue;
+        }else{
+            cvalue = prompt("请输入用户名！");
+            console.log(cvalue);
+            setCookie("username",cvalue,1);
+        }
+    }
+    document.getElementById("demo1").innerHTML = document.cookie;
+</script>
+
+</body>
+</html>

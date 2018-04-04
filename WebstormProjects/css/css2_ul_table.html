@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul.a
+        {
+            /*无序*/
+            /*list-style-type: circle;*/
+            /*list-style-type: square;*/
+            list-style-image: url('../images/shan.png');
+            list-style-type: circle;
+            /*注释：请始终规定一个 "list-style-type" 属性以防图像不可用时仍然可以显示为带*/
+        }
+        ol.b
+        {
+            list-style-type: upper-alpha;
+        }
+        ul.c
+        {
+            list-style-type: circle;
+            padding: 10px;
+            margin: 10px;
+        }
+        ul.c li
+        {
+            list-style-image: url("../images/square.png");
+            padding-left: 14px;
+            list-style-position: outside;
+            /*复合属性list-style的设置顺序为 类型、位置、图片*/
+        }
+        table
+        {
+            /*border-collapse: collapse;*/
+            width: 100%;
+            border: 1px solid black;
+            /*border: 1px solid black;*/
+            /*100%是占整个页面宽度的100%*/
+        }
+        th,td
+        {
+            border: 1px solid black;
+            text-align: center;
+            height: 50px;
+            /*vertical-align: bottom;*/
+            background: gray url("../images/square.png") no-repeat top right;
+            color: navajowhite;
+            padding: 100px;
+            /*css的padding和table的cellpading似乎是相同的*/
+        }
+
+    </style>
+</head>
+
+<body>
+<table cellspacing="0px" cellpadding="0px">
+    <tr>
+        <th>firstname</th>
+        <th>lastname</th>
+    </tr>
+    <tr>
+        <td>lv</td>
+        <td>junnan</td>
+    </tr>
+</table>
+    <ul class="a">
+        <li>coffe</li>
+        <li>milk</li>
+        <li>juice</li>
+    </ul>
+    <ol class="b">
+        <li>bike</li>
+        <li>bus</li>
+        <li>car</li>
+    </ol>
+    <ul class="c">
+        <li>shoes</li>
+        <li>t-shirt</li>
+        <li>jeans</li>
+    </ul>
+
+</body>
+</html>

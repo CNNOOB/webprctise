@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p>请输出一个 5 到 10 之间的数字:</p>
+
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">测试输入</button>
+<p id="message"></p>
+<p id="demo1"></p>
+
+<script>
+    function myFunction() {
+        var message, x;
+        message = document.getElementById("message");
+        message.innerHTML = "";
+        debugger;
+        x = document.getElementById("demo").value;
+        try {
+            if(x == "")  throw "值为空";
+            if(isNaN(x)) throw "不是数字";
+            x = Number(x);
+            if(x < 5)    throw "太小";
+            if(x > 10)   throw "太大";
+        }
+        catch(err) {
+            message.innerHTML = "错误: " + err;
+        }
+    }
+    var x = 5; // 初始化 x
+    elem = document.getElementById("demo1"); // 查找元素
+    elem.innerHTML = "x 为：" + x + "，y 为：" + y;           // 显示 x 和 y
+   // var y = 7; // 初始化 y
+    var y;
+    y=7;
+    var obj ={
+        _name:"ljn",
+        age:18,
+        get name(){return this._name}
+
+    };
+    document.write(obj.name);
+    eval("var1=10;var2=20;document.write(var1+var2)");
+    console.log(var1);
+    obj.nickname="L-PIG";
+    console.log(obj.nickname)
+</script>
+
+</body>
+</html>

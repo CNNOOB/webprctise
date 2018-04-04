@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="startTime()">
+<p id="demo"></p>
+<p id="demo1">点我</p>
+<p id="time"></p>
+    <script>
+
+        console.log(undefined||0);//0
+        console.log(undefined||-1);//-1
+        console.log(undefined||1);//1
+        console.log(undefined||2);//2
+        console.log(3||5);//3
+        console.log(5||3);//5
+        console.log(5|3);
+        function myFunction(a, b) {
+            return arguments.length;
+        }
+        document.getElementById("demo").innerHTML = myFunction(4);
+        document.getElementById("demo1").addEventListener("click",myFun);
+        Array.prototype.myUpcase = function () {
+          for(var i=0;i<this.length;i++){
+              this[i] = this[i].toUpperCase();
+          }
+        };
+        function myFun() {
+            var array = ["Hello","Myname","is","ljn"];
+            array.myUpcase();
+            document.getElementById("demo1").innerHTML = array;
+        }
+        function startTime() {
+            var date = new Date();
+            var hour = date.getHours();
+            var minute = date.getMinutes();
+            var second = date.getSeconds();
+            hour = checkTime(hour);
+            second = checkTime(second);
+            document.getElementById("time").innerHTML = hour+":"+minute+":"+second;
+            setTimeout('startTime()',500);
+        }
+        function checkTime(time){
+            if(time<10){
+                return "0"+String(time);
+            }else{
+                return time;
+            }
+        }
+        /*数组操作：
+            连接：concat///
+            删除最后一个：pop
+            删除第一个：shift
+            末尾添加：push
+            反转：reverse
+            截取：slice
+            开头添加unshift
+            */
+        var points = [40,100,1,5,25,10];
+        // points.sort(function(a,b){return a-b}); 这样才会按大小来排
+        points.sort();  //这样是按左边数字的大小来排 [1，10，100，25，40，5]
+        console.log(points);
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.splice(2,0,"Lemon","Kiwi");//请注意，splice() 方法与 slice() 方法的作用是不同的，splice() 方法会直接对数组进行修改。第一个参数：插入的位置，第二个参数：删除元素的个数
+        console.log(fruits);
+
+    </script>
+</body>
+</html>

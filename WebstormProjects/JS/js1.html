@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<body>
+    <p id="demo">ss</p>
+    <p id="Demo">ss</p><!--属性和元素不区分大小写-->
+    <p id="demo1"></p>
+    <div id="d"><p id="p">点我</p></div>
+</body>
+<script>
+    d = new Date();
+    console.log(Number(d));
+    console.log(d.getTime());
+    console.log(5+null);
+    console.log(5+"null");
+    console.log("5"+1);
+    console.log("5"-1);
+    var myVar = {name:"ljn"};
+    document.getElementById("demo").innerHTML = myVar;
+    //尝试输出一个对象或一个变量时，js会自动调用变量的toString（)方法。
+    //if myVar = [1,2,3]  转换为"1，2，3"
+    //if myVar = new Date() 转换为"Fri Jul 18 2014 09:08:55 GMT+0200"
+    window.addEventListener("resize",function () {
+       document.getElementById("demo1").innerHTML = Math.random();
+    });
+    document.getElementById("p").addEventListener("click",function () {
+        document.getElementById("d").style.color = "red";
+    },true)
+    document.getElementById("d").addEventListener("click",function () {
+        document.getElementById("d").style.color = "blue";
+    },true)
+    //默认为false，即冒泡传递，事件出发顺序：里->外
+    var p  = document.createElement("p");
+    // var node = document.createTextNode("新段落");
+    // p.appendChild(node);
+    p.innerHTML = "新段落哈哈";
+    document.getElementById("d").appendChild(p);
+    p.parentNode.removeChild(p);
+    var x = new Number(123);
+    x.MAX_VALUE=1000;
+    document.write(x.MAX_VALUE);
+</script>
+</html>

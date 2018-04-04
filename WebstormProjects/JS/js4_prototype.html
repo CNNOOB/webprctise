@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Person(name,age) {
+        this.name = name;
+        this.age = age;
+    }
+    p = new Person("LJN",18);
+    pp = new p.constructor();
+    document.write(p.age);
+    document.write(pp.age);
+    console.log(null instanceof Object);
+    console.log(typeof null)
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+        块元素是一个元素，占用了全部宽度，在前后都是换行符。
+
+            块元素的例子：
+
+            <h1>
+            <p>
+            <div>
+            内联元素只需要必要的宽度，不强制换行。
+
+            内联元素的例子：
+
+            <span>
+            <a>
+        */
+        h1.hidden
+        {
+            visibility: hidden;
+            /*会影响布局*/
+        }
+        h1.undisplay
+        {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h1 class="hidden">隐藏的标题</h1>
+<h1 class="visible">可见的标题</h1>
+<h1 class="undisplay">隐藏的标题</h1>
+<h1 class="visible">可见的标题</h1>
+
+</body>
+</html>

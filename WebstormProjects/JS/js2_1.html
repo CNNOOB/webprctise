@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form id="form1" name="myForm" onsubmit="check()" method="post" action="http://www.runoob.com/try/demo_source/demo_form.php">
+        <input name="myName" type="text" value="默认值">
+        <button type="submit">提交</button>
+    </form>
+    <script>
+        function check() {
+            var name = document.forms["myForm"]["myName"].value;
+            if(name==""||name==null){
+                alert("请输入名字");
+                return false;
+            }
+            return true;
+        }
+        var x;
+        if(x==null){
+            alert("haha");
+        }
+        x="";
+        console.log(x==null);//false
+    </script>
+</body>
+</html>
