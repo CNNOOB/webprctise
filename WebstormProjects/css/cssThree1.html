@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.class1{
+            width: 200px;
+            height: 100px;
+            background-color: yellow;
+            box-shadow: 10px 20px 5px black;
+                    /*  左边距 右边距 模糊距离*/
+            border: 10px solid red;
+            /*border-image: url("../images/chrome.png") 50 50 round;*/
+            border-radius: 50%;
+        }
+        div.class2{
+            width: 200px;
+            height: 100px;
+            background-color: #98bf21;
+            padding: 20px;
+            border-radius: 10px/20px;
+        }
+
+        #example1{
+            width: 300px;
+            padding: 20px;
+            background-image: url("../images/desk.png"),url("../images/caishao.jpg");
+            background-position: left top,right bottom;
+            background-repeat: repeat no-repeat;
+
+        }
+    </style>
+</head>
+<body>
+<div class="class1"></div>
+<br>
+<div class="class2"></div>
+
+<div id="example1">
+    <h1>Lorem Ipsum Dolor</h1>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+</div>
+</body>
+</html>

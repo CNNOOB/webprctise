@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *
+        {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            /*padding:内边距 margin：外边距 border：边框*/
+            /*box-sizing为border时padding和border包含在总宽/高度内*/
+        }
+        #main
+        {
+            width: 600px;
+            margin: 0 auto;
+            height: 50px;
+            background: #008CBA;
+            /*height: 50px;*/
+        }
+        .simple
+        {
+            width: 500px;
+            height: 50px;
+            margin: 20px auto;
+        }
+        .fancy
+        {
+            width: 600px;
+            height: 50px;
+            margin: 20px auto;
+            padding: 50px;
+            border: 3px solid navajowhite;
+        }
+        .relative
+        {
+            position: relative;
+            top: -20px;
+            left: 20px;
+            background-color: #5d9ab2;
+            width: 100px;
+            height: 50px;
+        }
+        .fixed
+        {
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            width: 200px;
+            height: 100px;
+            background-color: yellow;
+        }
+        .absolute
+        {
+            position: absolute;
+            top: 20px;
+            left: 19px;
+
+        }
+        div.absolute
+        {
+            width: 200px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="main"></div>
+    <div class="simple"></div>
+    <div class="fancy"></div>
+    <div style="width: 100px;height: 50px;background-color: aqua">haha</div>
+    <div class="relative">haha</div>
+    <div class="fixed">固定
+        <p class="absolute">绝对</p>
+    </div>
+    <div class="absolute">绝对</div>
+</body>
+</html>

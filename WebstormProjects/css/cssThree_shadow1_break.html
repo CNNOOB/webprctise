@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .card
+        {
+            width:250px;
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1);
+        }
+        .header
+        {
+            background-color: yellowgreen;
+            color: white;
+            padding: 10px;
+        }
+        .container{
+            padding: 10px;
+        }
+        .test
+        {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 12em;
+            border:1px solid #000000;
+            font-size: 14px;
+        }
+        p.break-world
+        {
+            width: 11em;
+            border:1px solid black;
+            word-wrap: break-word;
+            /*word-break: break-all;*/
+            /*word-break: keep-all;*/
+            float: left;
+            margin: 20px;
+        }
+        p.break-all
+        {
+            width: 11em;
+            border:1px solid black;
+            /*word-wrap: break-word;*/
+            word-break: break-all;
+            /*word-break: keep-all;*/
+            float: left;
+            margin: 20px;
+        }
+        p.keep-all
+        {
+            width: 11em;
+            border:1px solid black;
+            /*word-wrap: break-word;*/
+            /*word-break: break-all;*/
+            word-break: keep-all;
+            float: left;
+            margin: 20px;
+        }
+        p.normal
+        {
+            width: 11em;
+            border:1px solid black;
+            /*word-wrap: break-word;*/
+            /*word-break: break-all;*/
+            /*word-break: keep-all;*/
+            float: left;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <h1>1</h1>
+        </div>
+        <div class="container">
+            <p>January,1,2018</p>
+        </div>
+    </div>
+    <div   class="test" style="text-overflow: ellipsis">
+        <!--<p>-->
+        This is some long text that will not fit in the box
+        <!--</p>-->
+    </div>
+    <div class="test" style="text-overflow: clip">
+        This is some long text that will not fit in the box
+
+    </div>
+    <div class="test" style="text-overflow:'>>">
+     This is some long text that will not fit in the box
+    </div>
+    <p class="test" style="text-overflow: ellipsis">
+        This is some long text that will not fit in the box
+    </p>
+    <p class="break-world">This:paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The-long-word will break and wrap to the next line今天天气很好，哈哈哈，阿达达大厦大厦大厦大的，阿达达是生生世世达达：阿达达的。</p>
+    <p class="break-all">This:paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The-long-word will break and wrap to the next line今天天气很好，哈哈哈，阿达达大厦大厦大厦大的，阿达达是生生世世达达：阿达达的。</p>
+    <p class="keep-all">This:paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The-long-word will break and wrap to the next line今天天气很好，哈哈哈，阿达达大厦大厦大厦大的，阿达达是生生世世达达：阿达达的。</p>
+    <p class="normal">This:paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The-long-word will break and wrap to the next line今天天气很好，哈哈哈，阿达达大厦大厦大厦大的，阿达达是生生世世达达：阿达达的。</p>
+</body>
+</html>

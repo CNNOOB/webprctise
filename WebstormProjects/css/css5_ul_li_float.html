@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.container{
+            padding: 0;
+            margin: 0px;
+            /*divst-style-type: none;*/
+            background-color: gray;
+            /*overflow: hidden;*/
+
+        }
+        .float
+        {
+            float: left;
+            /*当container里的.float浮动起来时，div.float就脱离了*/
+            /*container，使得container高度位0，overflow: hidden;*/
+            /*可以使container获得正常高度*/
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="float"><a href="#home">主页</a></div>
+    <div class="float"><a href="#news">新闻</a></div>
+    <div class="float"><a href="#contact">联系</a></div>
+    <div class="float"><a class="active" href="#about">关于</a></div>
+    <!--<span>sad</span>-->
+</div>
+</body>
+</html>

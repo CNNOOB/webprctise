@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body
+        {
+            text-align: center;
+        }
+        .tooltip
+        {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+        .tooltip .tooltiptext
+        {
+            /*display: none;*/
+            width: 120px;
+            visibility: hidden;
+            background-color: black;
+            color: white;
+            text-align: center;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+            padding: 5px 0;
+
+            position: absolute;
+            z-index: 1;
+            /*left: 0px;*/
+            /*top: 0px;*/
+            /*top: -5px;*/
+            /*left: 100%;*/
+            bottom: 150%;
+            left: 50%;
+            margin-left: -60px;
+            opacity:0;
+            transition: 1s;
+        }
+        .tooltip .tooltiptext::after
+        {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent black black;
+
+
+
+        }
+        .tooltip:hover .tooltiptext
+        {
+            /*display: inline;*/
+            visibility: visible;
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div class="tooltip">鼠标移动到这
+        <span class="tooltiptext">提示文本</span>
+        <!--在绝对定位时，如果位设置left、top、right、bottom，-->
+        <!--那么在它的位置会根据元素块级、行级和浏览器类型改变-->
+    </div>
+
+</body>
+</html>

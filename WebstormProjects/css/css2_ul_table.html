@@ -44,17 +44,21 @@
             text-align: center;
             height: 50px;
             /*vertical-align: bottom;*/
-            background: gray url("../images/square.png") no-repeat top right;
+            background: gray url("../images/square.png") ;
             color: navajowhite;
-            padding: 100px;
-            /*css的padding和table的cellpading似乎是相同的*/
+            /*padding: 100px;*/
+            /*css的padding和table的cellpading似乎是相同的,padding会覆盖cellpading*/
+        }
+        tr.collapse
+        {
+            visibility: collapse;/*会隐藏tr*/
         }
 
     </style>
 </head>
 
 <body>
-<table cellspacing="0px" cellpadding="0px">
+<table cellspacing="0px" cellpadding="11px">
     <tr>
         <th>firstname</th>
         <th>lastname</th>
@@ -62,6 +66,10 @@
     <tr>
         <td>lv</td>
         <td>junnan</td>
+    </tr>
+    <tr class="collapse">
+        <td>lv</td>
+        <td>shanghong</td>
     </tr>
 </table>
     <ul class="a">

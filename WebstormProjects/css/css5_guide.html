@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            position: fixed;
+            margin: 0px;
+            padding: 0px;
+            list-style-type: none;
+            width: 25%;
+            border: 2px solid gray;
+
+        }
+        li a{
+            color: black;
+            display: block;
+            text-align: center;
+            border-bottom: 2px solid gray;
+
+
+            /*width: 100px;*/
+            margin: 0px auto;
+            padding: 4px;
+            text-decoration: none;
+            background-color: rgb(241,241,241);
+        }
+        li:last-child a
+        {
+            border-bottom: none;
+        }
+        .active{
+            color: white;
+            background-color: rgb(103,172,91);
+        }
+        li a:hover
+        {
+            color: white;
+            background-color: rgb(107,107,107);
+        }
+        a.active:hover
+        {
+            background-color: rgb(131,186,121);
+        }
+        .article
+        {
+            margin-left: 30%;
+
+        }
+
+
+    </style>
+</head>
+<body>
+<ul>
+    <li><a class="active" href="#home">主页</a></li>
+    <li><a href="#news">新闻</a></li>
+    <li><a href="#contact">联系</a></li>
+    <li><a href="#about">关于</a></li>
+</ul>
+<div class="article">
+    <h2>Fixed Full-height Side Nav</h2>
+    <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+    <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+    <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+</div>
+</body>
+</html>

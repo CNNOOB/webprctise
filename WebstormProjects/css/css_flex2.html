@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        .flex-container{
+            display: flex;
+            flex-flow: row wrap;
+            text-align: center;
+        }
+        .flex-container > *{
+            padding: 10px 10px;
+            flex: 1 100%;
+        }
+        .header{background-color: orange}
+        .article{background-color: royalblue}
+        .aside1{background-color: navajowhite}
+        .aside2{background-color: hotpink}
+        .footer{background-color: darkseagreen}
+        @media only screen and (min-width: 600px) {
+            .aside1{flex: 1 auto}
+            .aside2{flex: 1 auto}
+        }
+        @media only screen and (min-width: 800px) {
+            .header{order: 1}
+            .aside1{order: 2}
+            .article{flex: 3;order: 3}
+            .aside2{order: 4}
+            .footer{order: 5}
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <header class="header">头部</header>
+        <article class="article">
+            <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程(www.runoob.com)提供了最全的编程技术基础教程, 介绍了HTML、CSS、Javascript、Python，Java，Ruby，C，PHP , MySQL等各种编程语言的基础知识。 同时本站中也提供了大量的在线实例，通过实例，您可以更好的学习编程。</p>
+        </article>
+        <div class="aside1">边栏1</div>
+        <div class="aside2">边栏2</div>
+        <footer class="footer">底部</footer>
+    </div>
+</body>
+</html>

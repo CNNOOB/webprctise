@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div:not(.test){
+            height: 50px;
+             background-color: gray;
+        }
+    </style>
+
+</head>
+<body>
+    <div style="width: 500px">width</div><br>
+    <div style="max-width: 500px">max-width</div><br>
+    <div style="min-width: 500px">min-width</div><br>
+    <div style="max-width: 80%">max-width 80%</div><br>
+    <div style="min-width: 80%">min-width 80%</div><br>
+    <div class="test" style="position: relative">
+        <span>haha</span>
+        <div class="test" style="position: absolute">
+            <!--设置了absolute之后就不是默认宽度了，而是内容多宽就是多宽-->
+            <img src="../images/shan.png" width="400" height="50" >
+            <div>学的不仅仅是技术</div>
+        </div>
+    </div>
+</body>
+</html>

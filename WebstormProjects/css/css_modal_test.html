@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow: auto">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #modal{
+            position: fixed;
+            display: none;
+            overflow: auto;
+            z-index: 1;
+            top: 0;
+            left:0;
+            background-color: rgba(0,0,0,0.7);
+            width: 100%;
+            height: 100%;
+            padding-top: 100px;
+        }
+        #close{
+            position: absolute;
+            top: 15px;
+            right: 35px;
+        }
+        #modal-content
+        {
+            display: block;
+            margin: auto;
+            width: 80%;
+            max-width: 700px;
+        }
+        #close
+        {
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            transition-duration: 0.5s;
+        }
+
+        #close:hover{
+            color: gray;
+        }
+        #desc
+        {
+            width: 80%;
+            display: block;
+            text-align: center;
+            margin:auto;
+            padding: 0;
+            height:150px;
+            /*不加这个高度就没有滚动条*/
+        }
+        #desc,#modal-content{
+            animation-name: zoom;
+            animation-duration: 1s;
+        }
+        @keyframes zoom {
+            from{transform: scale(0.1)}
+            to{transform: scale(1)}
+        }
+
+    </style>
+</head>
+<body>
+    <img id="myImg" src="http://www.runoob.com/wp-content/uploads/2016/04/img_lights.jpg" width="300" height="200" alt="shan">
+    <div id="modal" class="modal">
+        <span id="close">X</span>
+        <img id="modal-content">
+        <p id="desc"></p>
+    </div>
+
+    <script>
+        var myImg = document.getElementById("myImg");
+        var modal = document.getElementById("modal");
+        var close = document.getElementById("close");
+        var modal_content = document.getElementById("modal-content");
+        var desc = document.getElementById("desc");
+
+        myImg.onclick = function(){
+            modal.style.display = "block";
+            modal_content.src = this.src;
+            modal_content.alt = this.alt;
+            desc.innerHTML = this.alt;
+        }
+
+        close.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+    </script>
+</body>
+</html>

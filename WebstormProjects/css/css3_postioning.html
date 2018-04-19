@@ -28,6 +28,79 @@
         {
             display: none;
         }
+        li
+        {
+            display:inline;
+        }
+        span
+        {
+            display: block;
+        }
+        p.pos_fixed
+        {
+            position: fixed;
+            top: 30px;
+            right: 5px;
+        }
+        h2.pos_relative
+        {
+
+            position: relative;
+            left: -20px;
+        }
+        h3
+        {
+            position: absolute;
+            left: 100px;
+            top: 150px;
+        }
+        p.pos_absolute
+        {
+            position: absolute;
+            left: 88px;
+            top: 99px;
+        }
+        h1
+        {
+            /*position: static;*/
+        }
+        img
+        {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: -1;
+            clip:rect(0px,60px,200px,0px);
+        }
+        div.hidden
+        {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+        }
+        div.scroll
+        {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            overflow: scroll;
+        }
+        div.visible
+        {
+            background-color: white;
+            width: 100px;
+            height: 100px;
+            overflow: visible;
+        }
+        div.visible
+        {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            overflow: auto;
+        }
+
     </style>
 </head>
 <body>
@@ -35,6 +108,61 @@
 <h1 class="visible">可见的标题</h1>
 <h1 class="undisplay">隐藏的标题</h1>
 <h1 class="visible">可见的标题</h1>
+<h2 class="pos_relative">h2,relative是相对其正常位置来定位的</h2>
+<img src="../images/shan.png" width="700" height="600">
+<ul>
+    <li>haha</li>
+    <li>xixi</li>
+</ul>
+<span>块一</span>
+<span>块二</span>
+<br>
+<p class="pos_absolute">ss<h3>绝对定位,相对于html</h3></p>
+<p class="pos_fixed">fixed,相对于浏览器窗口固定，即使窗口滚动</p>
+<div class="scroll">滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动</div>
+<div class="hidden">滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动</div>
+<div class="visible">滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动</div>
+<div class="auto">滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动滚动</div>
+
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
+<p>hhhhhhhh</p>
 
 </body>
 </html>
